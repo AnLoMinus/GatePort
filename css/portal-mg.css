@@ -1,0 +1,135 @@
+/* ============================================
+   פורטל Meta Gates (MG)
+   ============================================ */
+
+.portal-mg .portal-ring {
+    border-color: #845ef7;
+    box-shadow: 
+        0 0 15px #845ef7,
+        0 0 30px #845ef7,
+        0 0 45px #845ef7,
+        inset 0 0 15px #845ef7;
+    animation: mg-ring-future 7s infinite ease-in-out;
+}
+
+@keyframes mg-ring-future {
+    0%, 100% { 
+        transform: rotate(0deg) scale(1);
+        opacity: 0.8;
+        border-style: solid;
+    }
+    25% { 
+        transform: rotate(90deg) scale(1.06);
+        opacity: 1;
+        border-style: dotted;
+    }
+    50% { 
+        transform: rotate(180deg) scale(1);
+        opacity: 0.9;
+        border-style: solid;
+    }
+    75% { 
+        transform: rotate(270deg) scale(1.06);
+        opacity: 1;
+        border-style: dotted;
+    }
+}
+
+.portal-mg .portal-energy {
+    background: radial-gradient(circle, rgba(132, 94, 247, 0.5) 0%, transparent 70%);
+    box-shadow: 
+        0 0 25px #845ef7,
+        0 0 50px #845ef7,
+        0 0 75px #845ef7,
+        0 0 100px #845ef7;
+    animation: mg-energy-future 2.2s infinite;
+}
+
+@keyframes mg-energy-future {
+    0%, 100% { 
+        transform: scale(1) rotate(0deg);
+        opacity: 0.5;
+    }
+    33% { 
+        transform: scale(1.2) rotate(120deg);
+        opacity: 0.7;
+    }
+    66% { 
+        transform: scale(1.1) rotate(240deg);
+        opacity: 0.6;
+    }
+}
+
+.portal-mg:hover .portal-ring {
+    border-color: #9c88f9;
+    box-shadow: 
+        0 0 40px #9c88f9,
+        0 0 80px #9c88f9,
+        0 0 120px #9c88f9,
+        0 0 160px #9c88f9,
+        inset 0 0 40px #9c88f9;
+    animation: mg-ring-future-glow 1.1s infinite alternate;
+}
+
+@keyframes mg-ring-future-glow {
+    0% { 
+        box-shadow: 
+            0 0 40px #9c88f9,
+            0 0 80px #9c88f9,
+            0 0 120px #9c88f9,
+            0 0 160px #9c88f9;
+        filter: hue-rotate(0deg) brightness(1);
+    }
+    100% { 
+        box-shadow: 
+            0 0 50px #9c88f9,
+            0 0 100px #9c88f9,
+            0 0 150px #9c88f9,
+            0 0 200px #9c88f9;
+        filter: hue-rotate(30deg) brightness(1.3);
+    }
+}
+
+.portal-mg .portal-icon {
+    filter: drop-shadow(0 0 15px #845ef7);
+    animation: mg-icon-future 4.5s infinite ease-in-out;
+}
+
+@keyframes mg-icon-future {
+    0%, 100% { 
+        transform: translateY(0) rotate(0deg) scale(1);
+    }
+    20% { 
+        transform: translateY(-12px) rotate(72deg) scale(1.12);
+    }
+    40% { 
+        transform: translateY(0) rotate(144deg) scale(1);
+    }
+    60% { 
+        transform: translateY(-12px) rotate(216deg) scale(1.12);
+    }
+    80% { 
+        transform: translateY(0) rotate(288deg) scale(1);
+    }
+}
+
+.portal-mg:hover .portal-icon {
+    filter: drop-shadow(0 0 30px #9c88f9);
+    animation: mg-icon-future-spin 0.5s infinite linear;
+}
+
+@keyframes mg-icon-future-spin {
+    0% { transform: rotate(0deg) scale(1.18); }
+    100% { transform: rotate(360deg) scale(1.18); }
+}
+
+.portal-mg .portal-label {
+    color: #845ef7;
+    text-shadow: 0 0 15px #845ef7;
+}
+
+.portal-mg:hover .portal-label {
+    color: #9c88f9;
+    text-shadow: 0 0 25px #9c88f9;
+}
+

@@ -1,0 +1,123 @@
+/* ============================================
+   פורטל מפתחים (DH)
+   ============================================ */
+
+.portal-dh .portal-ring {
+    border-color: #ffd43b;
+    box-shadow: 
+        0 0 15px #ffd43b,
+        0 0 30px #ffd43b,
+        inset 0 0 15px #ffd43b;
+    animation: dh-ring-tech 3s infinite linear;
+}
+
+@keyframes dh-ring-tech {
+    0% { 
+        transform: rotate(0deg);
+        border-style: solid;
+    }
+    25% { 
+        transform: rotate(90deg);
+        border-style: dashed;
+    }
+    50% { 
+        transform: rotate(180deg);
+        border-style: solid;
+    }
+    75% { 
+        transform: rotate(270deg);
+        border-style: dashed;
+    }
+    100% { 
+        transform: rotate(360deg);
+        border-style: solid;
+    }
+}
+
+.portal-dh .portal-energy {
+    background: radial-gradient(circle, rgba(255, 212, 59, 0.4) 0%, transparent 70%);
+    box-shadow: 
+        0 0 20px #ffd43b,
+        0 0 40px #ffd43b,
+        0 0 60px #ffd43b;
+    animation: dh-energy-tech 1.2s infinite;
+}
+
+@keyframes dh-energy-tech {
+    0%, 100% { 
+        transform: scale(1);
+        opacity: 0.4;
+    }
+    50% { 
+        transform: scale(1.25);
+        opacity: 0.7;
+    }
+}
+
+.portal-dh:hover .portal-ring {
+    border-color: #ffec8e;
+    box-shadow: 
+        0 0 30px #ffec8e,
+        0 0 60px #ffec8e,
+        0 0 90px #ffec8e,
+        inset 0 0 30px #ffec8e;
+    animation: dh-ring-tech-glow 0.8s infinite alternate;
+}
+
+@keyframes dh-ring-tech-glow {
+    0% { 
+        box-shadow: 
+            0 0 30px #ffec8e,
+            0 0 60px #ffec8e,
+            0 0 90px #ffec8e;
+        border-width: 2px;
+    }
+    100% { 
+        box-shadow: 
+            0 0 40px #ffec8e,
+            0 0 80px #ffec8e,
+            0 0 120px #ffec8e;
+        border-width: 3px;
+    }
+}
+
+.portal-dh .portal-icon {
+    filter: drop-shadow(0 0 10px #ffd43b);
+    animation: dh-icon-tech 2.5s infinite;
+}
+
+@keyframes dh-icon-tech {
+    0%, 100% { 
+        transform: rotate(0deg) scale(1);
+    }
+    25% { 
+        transform: rotate(-15deg) scale(1.05);
+    }
+    50% { 
+        transform: rotate(0deg) scale(1);
+    }
+    75% { 
+        transform: rotate(15deg) scale(1.05);
+    }
+}
+
+.portal-dh:hover .portal-icon {
+    filter: drop-shadow(0 0 20px #ffec8e);
+    animation: dh-icon-tech-spin 0.5s infinite linear;
+}
+
+@keyframes dh-icon-tech-spin {
+    0% { transform: rotate(0deg) scale(1.1); }
+    100% { transform: rotate(360deg) scale(1.1); }
+}
+
+.portal-dh .portal-label {
+    color: #ffd43b;
+    text-shadow: 0 0 10px #ffd43b;
+}
+
+.portal-dh:hover .portal-label {
+    color: #ffec8e;
+    text-shadow: 0 0 20px #ffec8e;
+}
+

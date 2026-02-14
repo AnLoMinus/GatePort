@@ -1,130 +1,62 @@
-# 🌐 AnLoMinus – PortalVerse (PV)
+# 🌐 PortalVerse Website
 
-ברוך הבא לשער־העל של כל הפורטלים בממלכת AnLoMinus.  
-כאן תמצא מפת דרכים אחת שמרכזת את כל השערים: ידע, קלפים, קוד, עיצוב, קבלה ו־SparKing.
+אתר פורטל עתידני עם אפקטים חשמליים וקוסמיים.
 
----
+## 🚀 התקנה
 
-## 🚀 למה קיים הריפו הזה?
+פשוט פתח את `index.html` בדפדפן.
 
-- ✨ לאחד את כל עולמות היצירה למערכת אחת.
-- 🧭 לתת ניווט מהיר לכל מאגר, משחק, אתר או פרויקט.
-- 🪬 לשמור על סדר בין הרוח, הנפש, הקוד והאמנות.
-- 🛠 בסיס התחלתי ל־Portal OS עתידי (מערכת פורטלים מלאה).
+## 📁 מבנה הקבצים
 
----
-
-## 🧱 מבנה כללי
-
-```text
-Portal/
-├─ README.md
-├─ PORTALS_INDEX.md
-├─ ROADMAP.md
-├─ PORTAL_ARCHITECTURE.md
-├─ META_VISION.md
-├─ CHANGELOG.md
-├─ LICENSE
-├─ SECURITY.md
-├─ CONTRIBUTING.md
-├─ CONTRIBUTORS.md
-├─ CODE_OF_CONDUCT.md
-├─ SUPPORT.md
-├─ REVIEWS.md
-├─ RELEASING.md
-├─ VERSION
-├─ CODEOWNERS
-├─ .github/
-│  ├─ workflows/
-│  │  └─ ci.yml
-│  └─ ISSUE_TEMPLATE.md
-└─ portals/
-   ├─ personal-hub/
-   ├─ knowledge-hub/
-   ├─ cards-games/
-   ├─ psycho-spiritual/
-   ├─ dev-hub/
-   ├─ design-lab/
-   ├─ sparKing-universe/
-   └─ meta-gates/
+```
+website/
+├─ index.html              # דף הבית
+├─ css/
+│  ├─ main.css             # סטיילים ראשיים
+│  ├─ portal-gs.css        # סטיילים לפורטל אישי
+│  ├─ portal-cg.css        # סטיילים לפורטל משחקים
+│  ├─ portal-kh.css        # סטיילים לפורטל מאגרי ידע
+│  ├─ portal-ps.css        # סטיילים לפורטל פסיכו-רוחני
+│  ├─ portal-dh.css        # סטיילים לפורטל מפתחים
+│  ├─ portal-dl.css        # סטיילים לפורטל עיצוב
+│  ├─ portal-sk.css        # סטיילים לפורטל SparKing
+│  └─ portal-mg.css        # סטיילים לפורטל Meta Gates
+└─ js/
+   └─ main.js              # JavaScript ראשי
 ```
 
----
+## ✨ תכונות
 
-## 🧭 אינדקס פורטלים (תצוגה מהירה)
+- **שער ראשי מרכזי** עם אנימציות מסתובבות
+- **8 פורטלים** עם סטיילים ייחודיים לכל אחד
+- **מעגלים חשמליים** בין השער הראשי לפורטלים
+- **קווי אנרגיה** שמופיעים בעת hover על פורטל
+- **ניצוצות** אקראיים ברחבי המסך
+- **אפקטים קוסמיים** ייחודיים לכל פורטל
 
-|פורטל|קוד|תיאור קצר|תיקייה|
-|---|---|---|---|
-|פורטל אישי|`GS`|זהות, ביוגרפיה, חזון אישי|`portals/personal-hub/`|
-|משחקי קלפים|`CG`|כל משחקי הקלפים והחפיסות|`portals/cards-games/`|
-|מאגרי ידע|`KH`|כל המאגרי־על התוכניים|`portals/knowledge-hub/`|
-|פסיכו־רוחני|`PS`|קבלה, תיקון המידות, נשמה|`portals/psycho-spiritual/`|
-|מפתחים|`DH`|פרויקטי קוד ו־RepoCraft|`portals/dev-hub/`|
-|עיצוב|`DL`|פוסטרים, לוגואים, טמפלטים|`portals/design-lab/`|
-|SparKing|`SK`|יקום SparKing המלא|`portals/sparKing-universe/`|
-|Meta Gates|`MG`|ניסויים ועתיד|`portals/meta-gates/`|
+## 🎮 שימוש
 
----
+1. פתח את `index.html` בדפדפן
+2. רחף מעל פורטל כדי לראות את קו האנרגיה מהשער הראשי
+3. לחץ על פורטל כדי לנווט (ניתן להוסיף קישורים)
 
-## 🛠 איך להוסיף פורטל חדש?
+## 🎨 התאמה אישית
 
-1. צור תיקייה חדשה תחת `portals/your-portal-name/`.
+כל פורטל יש לו קובץ CSS נפרד שניתן לערוך:
+- `portal-gs.css` - פורטל אישי (כחול)
+- `portal-cg.css` - משחקים (אדום)
+- `portal-kh.css` - מאגרי ידע (ירוק)
+- `portal-ps.css` - פסיכו-רוחני (סגול)
+- `portal-dh.css` - מפתחים (צהוב)
+- `portal-dl.css` - עיצוב (ורוד)
+- `portal-sk.css` - SparKing (ורוד-סגול)
+- `portal-mg.css` - Meta Gates (סגול כהה)
 
-2. בתוך התיקייה:
+## 📝 הערות
 
-    - `README.md` – תיאור מלא של הפורטל.
-
-    - `LINKS.md` – קישורים למאגרים/ריפואים אחרים.
-
-    - `MAP.md` – מפת תתי־שערים בתוך הפורטל.
-
-3. עדכן את `PORTALS_INDEX.md` עם שורה חדשה בטבלה.
-
-4. עדכן את `ROADMAP.md` אם יש חזון עתידי לפורטל.
+האתר משתמש ב-CSS3 ו-JavaScript טהור, ללא תלויות חיצוניות.
 
 ---
-
-## 🧩 חזון לעתיד
-
-- 🌀 חיבור בין הפורטלים למערכת ווב אחת (Portal WebOS).
-
-- 🔗 יצירת API פנימי בין מאגרי ידע, משחקים ותורה.
-
-- 🎛 לוח שליטה ויזואלי לכל המאגר כולו.
-
----
-
-## 👑 קרדיטים
-
-- 🧠 Vision & Creation: [AnLoMinus](https://github.com/AnLoMinus)
-
-- 🌀 PortalVerse Structure: AnLoMinus × RepoCraft (RC)
-
-- 🌐 Repos קשורים:
-
-  - [HolisView](https://github.com/AnLoMinus/HolisView)
-
-  - [OpenTorah.AI](https://github.com/AnLoMinus) _(תיק פרויקט יעודי בהמשך)_
-
-  - [SparKing / Games / Cards Repos](https://github.com/AnLoMinus?tab=repositories)
-
----
-
-## 🏷 Hashtags
-
-# Portal #PortalVerse #AnLoMinus #RepoCraft #SparKing
-
----
-
-## ✨ פסוק
 
 **"זֶה הַשַּׁעַר לַה׳, צַדִּיקִים יָבֹאוּ בוֹ."** (תהילים קי״ח, כ׳)
 
-VERSION
-SUPPORT.md
-REVIEWS.md
-RELEASING.md
-CONTRIBUTING.md
-CONTRIBUTORS.md
-CODEOWNERS
-CODE_OF_CONDUCT.md

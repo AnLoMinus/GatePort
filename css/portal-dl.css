@@ -1,0 +1,119 @@
+/* ============================================
+   פורטל עיצוב (DL)
+   ============================================ */
+
+.portal-dl .portal-ring {
+    border-color: #ff8787;
+    box-shadow: 
+        0 0 15px #ff8787,
+        0 0 30px #ff8787,
+        inset 0 0 15px #ff8787;
+    animation: dl-ring-artistic 5s infinite ease-in-out;
+}
+
+@keyframes dl-ring-artistic {
+    0%, 100% { 
+        transform: rotate(0deg) scale(1);
+        border-radius: 50%;
+    }
+    25% { 
+        transform: rotate(45deg) scale(1.05);
+        border-radius: 40% 60% 40% 60%;
+    }
+    50% { 
+        transform: rotate(90deg) scale(1);
+        border-radius: 50%;
+    }
+    75% { 
+        transform: rotate(135deg) scale(1.05);
+        border-radius: 60% 40% 60% 40%;
+    }
+}
+
+.portal-dl .portal-energy {
+    background: radial-gradient(circle, rgba(255, 135, 135, 0.4) 0%, transparent 70%);
+    box-shadow: 
+        0 0 20px #ff8787,
+        0 0 40px #ff8787,
+        0 0 60px #ff8787;
+    animation: dl-energy-artistic 2s infinite;
+}
+
+@keyframes dl-energy-artistic {
+    0%, 100% { 
+        transform: scale(1) rotate(0deg);
+        opacity: 0.4;
+    }
+    50% { 
+        transform: scale(1.2) rotate(180deg);
+        opacity: 0.6;
+    }
+}
+
+.portal-dl:hover .portal-ring {
+    border-color: #ffa8a8;
+    box-shadow: 
+        0 0 35px #ffa8a8,
+        0 0 70px #ffa8a8,
+        0 0 105px #ffa8a8,
+        inset 0 0 35px #ffa8a8;
+    animation: dl-ring-artistic-glow 1.2s infinite alternate;
+}
+
+@keyframes dl-ring-artistic-glow {
+    0% { 
+        box-shadow: 
+            0 0 35px #ffa8a8,
+            0 0 70px #ffa8a8,
+            0 0 105px #ffa8a8;
+        filter: hue-rotate(0deg);
+    }
+    100% { 
+        box-shadow: 
+            0 0 45px #ffa8a8,
+            0 0 90px #ffa8a8,
+            0 0 135px #ffa8a8;
+        filter: hue-rotate(30deg);
+    }
+}
+
+.portal-dl .portal-icon {
+    filter: drop-shadow(0 0 10px #ff8787);
+    animation: dl-icon-artistic 3.5s infinite ease-in-out;
+}
+
+@keyframes dl-icon-artistic {
+    0%, 100% { 
+        transform: rotate(0deg) scale(1);
+    }
+    25% { 
+        transform: rotate(90deg) scale(1.08);
+    }
+    50% { 
+        transform: rotate(180deg) scale(1);
+    }
+    75% { 
+        transform: rotate(270deg) scale(1.08);
+    }
+}
+
+.portal-dl:hover .portal-icon {
+    filter: drop-shadow(0 0 25px #ffa8a8);
+    animation: dl-icon-artistic-spin 0.7s infinite linear;
+}
+
+@keyframes dl-icon-artistic-spin {
+    0% { transform: rotate(0deg) scale(1.12); }
+    100% { transform: rotate(360deg) scale(1.12); }
+}
+
+.portal-dl .portal-label {
+    color: #ff8787;
+    text-shadow: 0 0 10px #ff8787;
+}
+
+.portal-dl:hover .portal-label {
+    color: #ffa8a8;
+    text-shadow: 0 0 20px #ffa8a8;
+}
+

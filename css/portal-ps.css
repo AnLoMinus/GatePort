@@ -1,0 +1,123 @@
+/* ============================================
+   פורטל פסיכו-רוחני (PS)
+   ============================================ */
+
+.portal-ps .portal-ring {
+    border-color: #9775fa;
+    box-shadow: 
+        0 0 15px #9775fa,
+        0 0 30px #9775fa,
+        inset 0 0 15px #9775fa;
+    animation: ps-ring-mystic 6s infinite ease-in-out;
+}
+
+@keyframes ps-ring-mystic {
+    0%, 100% { 
+        transform: rotate(0deg) scale(1);
+        opacity: 0.8;
+    }
+    25% { 
+        transform: rotate(90deg) scale(1.05);
+        opacity: 1;
+    }
+    50% { 
+        transform: rotate(180deg) scale(1);
+        opacity: 0.9;
+    }
+    75% { 
+        transform: rotate(270deg) scale(1.05);
+        opacity: 1;
+    }
+}
+
+.portal-ps .portal-energy {
+    background: radial-gradient(circle, rgba(151, 117, 250, 0.4) 0%, transparent 70%);
+    box-shadow: 
+        0 0 20px #9775fa,
+        0 0 40px #9775fa,
+        0 0 60px #9775fa;
+    animation: ps-energy-mystic 2.5s infinite;
+}
+
+@keyframes ps-energy-mystic {
+    0%, 100% { 
+        transform: scale(1) rotate(0deg);
+        opacity: 0.4;
+    }
+    33% { 
+        transform: scale(1.2) rotate(120deg);
+        opacity: 0.6;
+    }
+    66% { 
+        transform: scale(1.1) rotate(240deg);
+        opacity: 0.5;
+    }
+}
+
+.portal-ps:hover .portal-ring {
+    border-color: #b197fc;
+    box-shadow: 
+        0 0 35px #b197fc,
+        0 0 70px #b197fc,
+        0 0 105px #b197fc,
+        inset 0 0 35px #b197fc;
+    animation: ps-ring-mystic-glow 1s infinite alternate;
+}
+
+@keyframes ps-ring-mystic-glow {
+    0% { 
+        box-shadow: 
+            0 0 35px #b197fc,
+            0 0 70px #b197fc,
+            0 0 105px #b197fc;
+        filter: hue-rotate(0deg);
+    }
+    100% { 
+        box-shadow: 
+            0 0 45px #b197fc,
+            0 0 90px #b197fc,
+            0 0 135px #b197fc;
+        filter: hue-rotate(20deg);
+    }
+}
+
+.portal-ps .portal-icon {
+    filter: drop-shadow(0 0 10px #9775fa);
+    animation: ps-icon-float-mystic 4s infinite ease-in-out;
+}
+
+@keyframes ps-icon-float-mystic {
+    0%, 100% { 
+        transform: translateY(0) rotate(0deg) scale(1);
+    }
+    25% { 
+        transform: translateY(-8px) rotate(90deg) scale(1.05);
+    }
+    50% { 
+        transform: translateY(0) rotate(180deg) scale(1);
+    }
+    75% { 
+        transform: translateY(-8px) rotate(270deg) scale(1.05);
+    }
+}
+
+.portal-ps:hover .portal-icon {
+    filter: drop-shadow(0 0 25px #b197fc);
+    animation: ps-icon-mystic-spin 0.6s infinite linear;
+}
+
+@keyframes ps-icon-mystic-spin {
+    0% { transform: rotate(0deg) scale(1.15); }
+    100% { transform: rotate(360deg) scale(1.15); }
+}
+
+.portal-ps .portal-label {
+    color: #9775fa;
+    text-shadow: 0 0 10px #9775fa;
+}
+
+.portal-ps:hover .portal-label {
+    color: #b197fc;
+    text-shadow: 0 0 20px #b197fc;
+}
+

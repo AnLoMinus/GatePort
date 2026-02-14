@@ -1,0 +1,497 @@
+/* ============================================
+   PortalVerse - Main Styles
+   ============================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-energy: #00ffff;
+    --secondary-energy: #ff00ff;
+    --tertiary-energy: #ffff00;
+    --dark-bg: #0a0a1a;
+    --darker-bg: #050510;
+    --portal-size: 120px;
+    --main-gate-size: 300px;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--darker-bg);
+    color: var(--primary-energy);
+    overflow: hidden;
+    height: 100vh;
+    position: relative;
+}
+
+.universe {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+/* ============================================
+   רקע קוסמי - תמונה מותאמת אישית
+   ============================================ */
+
+.cosmic-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--darker-bg);
+    z-index: 0;
+    overflow: hidden;
+}
+
+/* רקע תמונה - אם קיים */
+.cosmic-background.has-background-image {
+    background-image: url('../assets/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Fallback אם אין תמונה */
+.cosmic-background::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(ellipse at center, #1a1a3a 0%, var(--darker-bg) 100%);
+    z-index: 1;
+    opacity: 0.3;
+}
+
+.cosmic-background.has-background-image::before {
+    display: none;
+}
+
+/* ============================================
+   שער ראשי מרכזי
+   ============================================ */
+
+.main-gate {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: var(--main-gate-size);
+    height: var(--main-gate-size);
+    z-index: 10;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.main-gate.gate-active {
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+.main-gate.gate-active .gate-ring {
+    animation-duration: 5s;
+    box-shadow: 
+        0 0 40px var(--primary-energy),
+        0 0 80px var(--primary-energy),
+        0 0 120px var(--primary-energy);
+}
+
+.main-gate.gate-active .energy-pulse {
+    animation-duration: 1s;
+}
+
+.gate-core {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gate-ring {
+    position: absolute;
+    border: 3px solid;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: gate-rotate 20s infinite linear;
+}
+
+.gate-ring.ring-1 {
+    width: 100%;
+    height: 100%;
+    border-color: var(--primary-energy);
+    opacity: 0.6;
+    box-shadow: 0 0 30px var(--primary-energy);
+}
+
+.gate-ring.ring-2 {
+    width: 80%;
+    height: 80%;
+    border-color: var(--secondary-energy);
+    opacity: 0.5;
+    animation-duration: 15s;
+    animation-direction: reverse;
+    box-shadow: 0 0 25px var(--secondary-energy);
+}
+
+.gate-ring.ring-3 {
+    width: 60%;
+    height: 60%;
+    border-color: var(--tertiary-energy);
+    opacity: 0.4;
+    animation-duration: 10s;
+    box-shadow: 0 0 20px var(--tertiary-energy);
+}
+
+@keyframes gate-rotate {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+.gate-center {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.gate-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-energy);
+    text-shadow: 
+        0 0 10px var(--primary-energy),
+        0 0 20px var(--primary-energy),
+        0 0 30px var(--primary-energy);
+    margin-bottom: 10px;
+    animation: title-pulse 2s infinite ease-in-out;
+}
+
+.gate-subtitle {
+    font-size: 1rem;
+    color: var(--secondary-energy);
+    text-shadow: 0 0 10px var(--secondary-energy);
+}
+
+@keyframes title-pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.8; transform: scale(1.05); }
+}
+
+.energy-pulse {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 2px solid var(--primary-energy);
+    opacity: 0;
+    animation: energy-pulse 3s infinite;
+}
+
+@keyframes energy-pulse {
+    0% {
+        transform: translate(-50%, -50%) scale(0.8);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1.5);
+        opacity: 0;
+    }
+}
+
+/* ============================================
+   קונטיינר פורטלים
+   ============================================ */
+
+.portals-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+}
+
+.portal {
+    position: absolute;
+    width: var(--portal-size);
+    height: var(--portal-size);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.portal:hover {
+    transform: scale(1.2);
+    z-index: 20;
+}
+
+.portal.portal-active {
+    transform: scale(1.3);
+    z-index: 25;
+}
+
+.portal-gate {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.portal-ring {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 2px solid;
+    border-radius: 50%;
+    opacity: 0.7;
+    animation: portal-rotate 10s infinite linear;
+}
+
+@keyframes portal-rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.portal-core {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.portal-icon {
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+}
+
+.portal-label {
+    font-size: 0.9rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.portal-energy {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.portal:hover .portal-energy {
+    opacity: 1;
+}
+
+.portal-name {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.85rem;
+    text-align: center;
+    white-space: nowrap;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.portal:hover .portal-name {
+    opacity: 1;
+}
+
+/* ============================================
+   מיקום פורטלים במעגל
+   ============================================ */
+
+.portal-gs {
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.portal-cg {
+    top: 20%;
+    right: 20%;
+}
+
+.portal-kh {
+    top: 50%;
+    right: 10%;
+    transform: translateY(-50%);
+}
+
+.portal-ps {
+    bottom: 20%;
+    right: 20%;
+}
+
+.portal-dh {
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.portal-dl {
+    bottom: 20%;
+    left: 20%;
+}
+
+.portal-sk {
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+}
+
+.portal-mg {
+    top: 20%;
+    left: 20%;
+}
+
+/* ============================================
+   מעגלים חשמליים
+   ============================================ */
+
+.energy-circuits {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    pointer-events: none;
+}
+
+/* ============================================
+   קווי אנרגיה
+   ============================================ */
+
+.energy-beams {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+    pointer-events: none;
+}
+
+.energy-beam {
+    position: absolute;
+    height: 3px;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        var(--primary-energy) 50%, 
+        transparent 100%);
+    box-shadow: 0 0 10px var(--primary-energy);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: 15;
+}
+
+.energy-beam.active {
+    opacity: 1;
+    animation: beam-flow 1s infinite;
+}
+
+@keyframes beam-flow {
+    0% { 
+        background-position: 0% 50%;
+        box-shadow: 0 0 10px var(--primary-energy);
+    }
+    50% {
+        box-shadow: 0 0 20px var(--primary-energy), 0 0 30px var(--primary-energy);
+    }
+    100% { 
+        background-position: 100% 50%;
+        box-shadow: 0 0 10px var(--primary-energy);
+    }
+}
+
+/* ============================================
+   ניצוצות
+   ============================================ */
+
+.sparks-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.spark {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: var(--primary-energy);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--primary-energy);
+    opacity: 0;
+    animation: spark-fly 2s infinite;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.spark-mouse {
+    width: 6px;
+    height: 6px;
+    animation: spark-fly-mouse 1.5s ease-out forwards;
+}
+
+@keyframes spark-fly {
+    0% {
+        opacity: 1;
+        transform: translate(0, 0) scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(var(--spark-x), var(--spark-y)) scale(0);
+    }
+}
+
+@keyframes spark-fly-mouse {
+    0% {
+        opacity: 1;
+        transform: translate(0, 0) scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(var(--spark-x), var(--spark-y)) scale(0);
+    }
+}
+
+/* מעגלים חשמליים */
+.electric-circle {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 1;
+    transition: transform 0.1s ease-out, opacity 0.1s ease-out;
+}
+
+/* ============================================
+   Responsive
+   ============================================ */
+
+@media (max-width: 768px) {
+    :root {
+        --portal-size: 80px;
+        --main-gate-size: 200px;
+    }
+    
+    .gate-title {
+        font-size: 1.8rem;
+    }
+    
+    .portal-icon {
+        font-size: 1.8rem;
+    }
+}
+

@@ -1,0 +1,88 @@
+/* ============================================
+   פורטל אישי - Gate of Self (GS)
+   ============================================ */
+
+.portal-gs .portal-ring {
+    border-color: #4a90e2;
+    box-shadow: 
+        0 0 15px #4a90e2,
+        0 0 30px #4a90e2,
+        inset 0 0 15px #4a90e2;
+}
+
+.portal-gs .portal-energy {
+    background: radial-gradient(circle, rgba(74, 144, 226, 0.3) 0%, transparent 70%);
+    box-shadow: 
+        0 0 20px #4a90e2,
+        0 0 40px #4a90e2,
+        0 0 60px #4a90e2;
+    animation: gs-energy-pulse 2s infinite ease-in-out;
+}
+
+@keyframes gs-energy-pulse {
+    0%, 100% { 
+        transform: scale(1);
+        opacity: 0.3;
+    }
+    50% { 
+        transform: scale(1.2);
+        opacity: 0.6;
+    }
+}
+
+.portal-gs:hover .portal-ring {
+    border-color: #6bb3ff;
+    box-shadow: 
+        0 0 25px #6bb3ff,
+        0 0 50px #6bb3ff,
+        0 0 75px #6bb3ff,
+        inset 0 0 25px #6bb3ff;
+    animation: gs-ring-glow 1s infinite alternate;
+}
+
+@keyframes gs-ring-glow {
+    0% { 
+        box-shadow: 
+            0 0 25px #6bb3ff,
+            0 0 50px #6bb3ff,
+            0 0 75px #6bb3ff;
+    }
+    100% { 
+        box-shadow: 
+            0 0 35px #6bb3ff,
+            0 0 70px #6bb3ff,
+            0 0 100px #6bb3ff;
+    }
+}
+
+.portal-gs .portal-icon {
+    filter: drop-shadow(0 0 10px #4a90e2);
+    animation: gs-icon-float 3s infinite ease-in-out;
+}
+
+@keyframes gs-icon-float {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-10px) rotate(5deg); }
+}
+
+.portal-gs:hover .portal-icon {
+    filter: drop-shadow(0 0 20px #6bb3ff);
+    animation: gs-icon-spin 1s infinite linear;
+}
+
+@keyframes gs-icon-spin {
+    0% { transform: rotate(0deg) scale(1); }
+    50% { transform: rotate(180deg) scale(1.1); }
+    100% { transform: rotate(360deg) scale(1); }
+}
+
+.portal-gs .portal-label {
+    color: #4a90e2;
+    text-shadow: 0 0 10px #4a90e2;
+}
+
+.portal-gs:hover .portal-label {
+    color: #6bb3ff;
+    text-shadow: 0 0 15px #6bb3ff;
+}
+

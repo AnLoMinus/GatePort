@@ -1,0 +1,108 @@
+/* ============================================
+   פורטל מאגרי ידע (KH)
+   ============================================ */
+
+.portal-kh .portal-ring {
+    border-color: #51cf66;
+    box-shadow: 
+        0 0 15px #51cf66,
+        0 0 30px #51cf66,
+        inset 0 0 15px #51cf66;
+    animation: kh-ring-expand 4s infinite ease-in-out;
+}
+
+@keyframes kh-ring-expand {
+    0%, 100% { 
+        transform: scale(1);
+        opacity: 0.7;
+    }
+    50% { 
+        transform: scale(1.1);
+        opacity: 1;
+    }
+}
+
+.portal-kh .portal-energy {
+    background: radial-gradient(circle, rgba(81, 207, 102, 0.3) 0%, transparent 70%);
+    box-shadow: 
+        0 0 20px #51cf66,
+        0 0 40px #51cf66,
+        0 0 60px #51cf66;
+    animation: kh-energy-wave 3s infinite;
+}
+
+@keyframes kh-energy-wave {
+    0%, 100% { 
+        transform: scale(1);
+        opacity: 0.3;
+    }
+    25% { 
+        transform: scale(1.15);
+        opacity: 0.5;
+    }
+    50% { 
+        transform: scale(1.25);
+        opacity: 0.4;
+    }
+    75% { 
+        transform: scale(1.15);
+        opacity: 0.5;
+    }
+}
+
+.portal-kh:hover .portal-ring {
+    border-color: #69db7c;
+    box-shadow: 
+        0 0 30px #69db7c,
+        0 0 60px #69db7c,
+        0 0 90px #69db7c,
+        inset 0 0 30px #69db7c;
+    animation: kh-ring-glow 1.5s infinite alternate;
+}
+
+@keyframes kh-ring-glow {
+    0% { 
+        box-shadow: 
+            0 0 30px #69db7c,
+            0 0 60px #69db7c,
+            0 0 90px #69db7c;
+    }
+    100% { 
+        box-shadow: 
+            0 0 40px #69db7c,
+            0 0 80px #69db7c,
+            0 0 120px #69db7c;
+    }
+}
+
+.portal-kh .portal-icon {
+    filter: drop-shadow(0 0 10px #51cf66);
+    animation: kh-icon-rotate 5s infinite linear;
+}
+
+@keyframes kh-icon-rotate {
+    0% { transform: rotate(0deg) scale(1); }
+    50% { transform: rotate(180deg) scale(1.05); }
+    100% { transform: rotate(360deg) scale(1); }
+}
+
+.portal-kh:hover .portal-icon {
+    filter: drop-shadow(0 0 20px #69db7c);
+    animation: kh-icon-fast-rotate 1s infinite linear;
+}
+
+@keyframes kh-icon-fast-rotate {
+    0% { transform: rotate(0deg) scale(1.1); }
+    100% { transform: rotate(360deg) scale(1.1); }
+}
+
+.portal-kh .portal-label {
+    color: #51cf66;
+    text-shadow: 0 0 10px #51cf66;
+}
+
+.portal-kh:hover .portal-label {
+    color: #69db7c;
+    text-shadow: 0 0 20px #69db7c;
+}
+
