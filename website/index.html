@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="PortalVerse - שער העל של כל הפורטלים">
+    <title>🌐 PortalVerse – שער העל</title>
+
+    <!-- Resource Hints -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="preconnect" href="." crossorigin>
+
+    <!-- Critical CSS - נטען מיד -->
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- Non-critical CSS - נטען אסינכרונית אחרי הרינדור הראשוני -->
+    <link rel="stylesheet" href="css/portal-gs.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="css/portal-cg.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="css/portal-kh.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="css/portal-ps.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="css/portal-dh.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="css/portal-dl.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="css/portal-sk.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="css/portal-mg.css" media="print" onload="this.media='all'">
+
+    <!-- Fallback for browsers that don't support media="print" trick -->
+    <noscript>
+        <link rel="stylesheet" href="css/portal-gs.css">
+        <link rel="stylesheet" href="css/portal-cg.css">
+        <link rel="stylesheet" href="css/portal-kh.css">
+        <link rel="stylesheet" href="css/portal-ps.css">
+        <link rel="stylesheet" href="css/portal-dh.css">
+        <link rel="stylesheet" href="css/portal-dl.css">
+        <link rel="stylesheet" href="css/portal-sk.css">
+        <link rel="stylesheet" href="css/portal-mg.css">
+    </noscript>
+
+    <!-- Inline critical CSS for faster initial render -->
+    <style>
+        /* Critical CSS - רק מה שצריך לרינדור הראשוני */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #050510;
+            color: #00ffff;
+            overflow: hidden;
+            height: 100vh;
+        }
+
+        .universe {
+            width: 100%;
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cosmic-background {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(ellipse at center, #1a1a3a 0%, #050510 100%);
+            z-index: 0;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="universe">
+        <!-- רקע קוסמי - תמונה מותאמת אישית -->
+        <div class="cosmic-background" id="cosmicBackground"></div>
+
+        <!-- מעגלים חשמליים בין השערים -->
+        <svg class="energy-circuits" id="energyCircuits">
+            <defs>
+                <linearGradient id="energyGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#00ffff;stop-opacity:1" />
+                    <stop offset="50%" style="stop-color:#ff00ff;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#00ffff;stop-opacity:1" />
+                </linearGradient>
+            </defs>
+        </svg>
+
+        <!-- שער ראשי מרכזי -->
+        <div class="main-gate" id="mainGate">
+            <div class="gate-core">
+                <div class="gate-ring ring-1"></div>
+                <div class="gate-ring ring-2"></div>
+                <div class="gate-ring ring-3"></div>
+                <div class="gate-center">
+                    <h1 class="gate-title">PortalVerse</h1>
+                    <p class="gate-subtitle">שער העל</p>
+                </div>
+            </div>
+            <div class="energy-pulse"></div>
+        </div>
+
+        <!-- פורטלים -->
+        <div class="portals-container">
+            <!-- פורטל 1: אישי (GS) -->
+            <div class="portal portal-gs" data-portal="gs" data-name="פורטל אישי">
+                <div class="portal-gate">
+                    <div class="portal-ring"></div>
+                    <div class="portal-core">
+                        <div class="portal-icon">🌀</div>
+                        <div class="portal-label">GS</div>
+                    </div>
+                    <div class="portal-energy"></div>
+                </div>
+                <div class="portal-name">Gate of Self</div>
+            </div>
+
+            <!-- פורטל 2: משחקים (CG) -->
+            <div class="portal portal-cg" data-portal="cg" data-name="משחקי קלפים">
+                <div class="portal-gate">
+                    <div class="portal-ring"></div>
+                    <div class="portal-core">
+                        <div class="portal-icon">🎮</div>
+                        <div class="portal-label">CG</div>
+                    </div>
+                    <div class="portal-energy"></div>
+                </div>
+                <div class="portal-name">Cards & Games</div>
+            </div>
+
+            <!-- פורטל 3: מאגרי ידע (KH) -->
+            <div class="portal portal-kh" data-portal="kh" data-name="מאגרי ידע">
+                <div class="portal-gate">
+                    <div class="portal-ring"></div>
+                    <div class="portal-core">
+                        <div class="portal-icon">📚</div>
+                        <div class="portal-label">KH</div>
+                    </div>
+                    <div class="portal-energy"></div>
+                </div>
+                <div class="portal-name">Knowledge Hub</div>
+            </div>
+
+            <!-- פורטל 4: פסיכו-רוחני (PS) -->
+            <div class="portal portal-ps" data-portal="ps" data-name="פסיכו-רוחני">
+                <div class="portal-gate">
+                    <div class="portal-ring"></div>
+                    <div class="portal-core">
+                        <div class="portal-icon">🧬</div>
+                        <div class="portal-label">PS</div>
+                    </div>
+                    <div class="portal-energy"></div>
+                </div>
+                <div class="portal-name">Psycho-Spiritual</div>
+            </div>
+
+            <!-- פורטל 5: מפתחים (DH) -->
+            <div class="portal portal-dh" data-portal="dh" data-name="מפתחים">
+                <div class="portal-gate">
+                    <div class="portal-ring"></div>
+                    <div class="portal-core">
+                        <div class="portal-icon">🛠</div>
+                        <div class="portal-label">DH</div>
+                    </div>
+                    <div class="portal-energy"></div>
+                </div>
+                <div class="portal-name">Dev Hub</div>
+            </div>
+
+            <!-- פורטל 6: עיצוב (DL) -->
+            <div class="portal portal-dl" data-portal="dl" data-name="עיצוב">
+                <div class="portal-gate">
+                    <div class="portal-ring"></div>
+                    <div class="portal-core">
+                        <div class="portal-icon">🎨</div>
+                        <div class="portal-label">DL</div>
+                    </div>
+                    <div class="portal-energy"></div>
+                </div>
+                <div class="portal-name">Design Lab</div>
+            </div>
+
+            <!-- פורטל 7: SparKing (SK) -->
+            <div class="portal portal-sk" data-portal="sk" data-name="SparKing">
+                <div class="portal-gate">
+                    <div class="portal-ring"></div>
+                    <div class="portal-core">
+                        <div class="portal-icon">💫</div>
+                        <div class="portal-label">SK</div>
+                    </div>
+                    <div class="portal-energy"></div>
+                </div>
+                <div class="portal-name">SparKing Universe</div>
+            </div>
+
+            <!-- פורטל 8: Meta Gates (MG) -->
+            <div class="portal portal-mg" data-portal="mg" data-name="Meta Gates">
+                <div class="portal-gate">
+                    <div class="portal-ring"></div>
+                    <div class="portal-core">
+                        <div class="portal-icon">🔮</div>
+                        <div class="portal-label">MG</div>
+                    </div>
+                    <div class="portal-energy"></div>
+                </div>
+                <div class="portal-name">Meta Gates</div>
+            </div>
+        </div>
+
+        <!-- קווי אנרגיה מהשער הראשי -->
+        <div class="energy-beams" id="energyBeams"></div>
+
+        <!-- ניצוצות -->
+        <div class="sparks-container" id="sparksContainer"></div>
+    </div>
+
+    <script src="js/main.js" defer></script>
+</body>
+
+</html>

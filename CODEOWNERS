@@ -1,0 +1,25 @@
+# CODEOWNERS – PortalVerse
+
+# כל הקבצים במאגר
+* @AnLoMinus
+
+# קבצי תיעוד מרכזיים
+/README.md @AnLoMinus
+/PORTALS_INDEX.md @AnLoMinus
+/ROADMAP.md @AnLoMinus
+/PORTAL_ARCHITECTURE.md @AnLoMinus
+/META_VISION.md @AnLoMinus
+/CHANGELOG.md @AnLoMinus
+
+# קבצי מדיניות
+/LICENSE @AnLoMinus
+/SECURITY.md @AnLoMinus
+/CONTRIBUTING.md @AnLoMinus
+/CODE_OF_CONDUCT.md @AnLoMinus
+
+# פורטלים
+/portals/ @AnLoMinus
+
+# GitHub workflows
+/.github/ @AnLoMinus
+
